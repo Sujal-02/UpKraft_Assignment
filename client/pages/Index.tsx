@@ -1,5 +1,12 @@
 import DashboardLayout from "@/components/DashboardLayout";
-import { Calendar, Clock, Users, TrendingUp, Star, ChevronRight } from "lucide-react";
+import {
+  Calendar,
+  Clock,
+  Users,
+  TrendingUp,
+  Star,
+  ChevronRight,
+} from "lucide-react";
 
 // Mock data for the dashboard
 const statsData = [
@@ -8,21 +15,75 @@ const statsData = [
   { label: "Total CSAT Score", value: "80%", color: "text-blue-600" },
   { label: "Total CSAT Score", value: "80%", color: "text-purple-600" },
   { label: "Assignment Completion Rate", value: "15%", color: "text-blue-600" },
-  { label: "Assignment Completion Rate", value: "15%", color: "text-purple-600" },
+  {
+    label: "Assignment Completion Rate",
+    value: "15%",
+    color: "text-purple-600",
+  },
 ];
 
 const upcomingLessons = [
-  { date: "21 July", time: "2:00 - 3:00 Pm", course: "Introduction to Piano", student: "Eunice Braid & Arnold Hayes" },
-  { date: "22 July", time: "4:00 - 5:00 Pm", course: "Finger Dexterity", student: "Eunice Braid & Arnold Hayes" },
-  { date: "23 July", time: "3:00 - 4:00 Pm", course: "Basic Chords", student: "Eunice Braid & Arnold Hayes" },
-  { date: "24 July", time: "5:00 - 6:00 Pm", course: "Rhythm Basics", student: "Eunice Braid & Arnold Hayes" },
-  { date: "25 July", time: "2:00 - 3:00 Pm", course: "Simple Melodies", student: "Eunice Braid & Arnold Hayes" },
-  { date: "26 July", time: "6:00 - 7:00 Pm", course: "Hand Coordination", student: "Eunice Braid & Arnold Hayes" },
-  { date: "24 July", time: "1:00 - 4:00 Pm", course: "Rhythm Basics", student: "Eunice Braid & Arnold Hayes" },
-  { date: "22 July", time: "4:00 - 5:00 Pm", course: "Finger Warmups", student: "Eunice Braid & Arnold Hayes" },
+  {
+    date: "21 July",
+    time: "2:00 - 3:00 Pm",
+    course: "Introduction to Piano",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "22 July",
+    time: "4:00 - 5:00 Pm",
+    course: "Finger Dexterity",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "23 July",
+    time: "3:00 - 4:00 Pm",
+    course: "Basic Chords",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "24 July",
+    time: "5:00 - 6:00 Pm",
+    course: "Rhythm Basics",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "25 July",
+    time: "2:00 - 3:00 Pm",
+    course: "Simple Melodies",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "26 July",
+    time: "6:00 - 7:00 Pm",
+    course: "Hand Coordination",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "24 July",
+    time: "1:00 - 4:00 Pm",
+    course: "Rhythm Basics",
+    student: "Eunice Braid & Arnold Hayes",
+  },
+  {
+    date: "22 July",
+    time: "4:00 - 5:00 Pm",
+    course: "Finger Warmups",
+    student: "Eunice Braid & Arnold Hayes",
+  },
 ];
 
-const CircularProgress = ({ value, max, label, size = 120 }: { value: number; max: number; label: string; size?: number }) => {
+const CircularProgress = ({
+  value,
+  max,
+  label,
+  size = 120,
+}: {
+  value: number;
+  max: number;
+  label: string;
+  size?: number;
+}) => {
   const percentage = (value / max) * 100;
   const circumference = 2 * Math.PI * (size / 3);
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
@@ -63,11 +124,19 @@ const CircularProgress = ({ value, max, label, size = 120 }: { value: number; ma
   );
 };
 
-const ScoreCircle = ({ score, label, color = "orange" }: { score: number; label: string; color?: string }) => {
+const ScoreCircle = ({
+  score,
+  label,
+  color = "orange",
+}: {
+  score: number;
+  label: string;
+  color?: string;
+}) => {
   const percentage = score * 10; // Convert 7.6 to 76%
   const circumference = 2 * Math.PI * 35;
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
-  
+
   const colorClasses = {
     orange: "text-orange-500",
     blue: "text-blue-500",
@@ -151,8 +220,13 @@ export default function Index() {
           <div className="md:col-span-2 lg:col-span-2">
             <div className="grid grid-cols-2 gap-2 lg:gap-4 h-full">
               {statsData.map((stat, index) => (
-                <div key={index} className="bg-white rounded-xl p-3 lg:p-4 border border-gray-200 flex flex-col justify-center">
-                  <div className={`text-xl lg:text-2xl font-bold ${stat.color} mb-1`}>
+                <div
+                  key={index}
+                  className="bg-white rounded-xl p-3 lg:p-4 border border-gray-200 flex flex-col justify-center"
+                >
+                  <div
+                    className={`text-xl lg:text-2xl font-bold ${stat.color} mb-1`}
+                  >
                     {stat.value}
                   </div>
                   <div className="text-xs lg:text-sm text-gray-600 leading-tight">
@@ -195,19 +269,35 @@ export default function Index() {
                 <table className="w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Date</th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Time</th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600 hidden sm:table-cell">Course</th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Student</th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                        Date
+                      </th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                        Time
+                      </th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600 hidden sm:table-cell">
+                        Course
+                      </th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                        Student
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {upcomingLessons.map((lesson, index) => (
                       <tr key={index} className="border-t border-gray-100">
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.date}</td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.time}</td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900 hidden sm:table-cell">{lesson.course}</td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.student.split(' &')[0]}</td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
+                          {lesson.date}
+                        </td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
+                          {lesson.time}
+                        </td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900 hidden sm:table-cell">
+                          {lesson.course}
+                        </td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
+                          {lesson.student.split(" &")[0]}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -220,14 +310,18 @@ export default function Index() {
           <div className="space-y-4 lg:space-y-6">
             {/* Performance Widgets */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">Overall Course Performance</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">
+                Overall Course Performance
+              </h3>
               <div className="flex justify-center">
                 <ScoreCircle score={7.6} label="" color="orange" />
               </div>
             </div>
 
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">Overall Student Performance</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">
+                Overall Student Performance
+              </h3>
               <div className="flex justify-center">
                 <ScoreCircle score={6.6} label="" color="blue" />
               </div>
@@ -235,7 +329,9 @@ export default function Index() {
 
             {/* Feedback Pending */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">Feedback Pending</h3>
+              <h3 className="text-lg font-semibold mb-4 text-center">
+                Feedback Pending
+              </h3>
               <div className="flex justify-center mb-4">
                 <CircularProgress value={12} max={20} label="" size={80} />
               </div>

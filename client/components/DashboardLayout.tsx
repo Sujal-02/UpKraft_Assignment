@@ -16,7 +16,7 @@ import {
   HelpCircle,
   User,
   Menu,
-  X
+  X,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -51,12 +51,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       )}
 
       {/* Sidebar */}
-      <aside className={cn(
-        "w-64 bg-upkraft-purple text-white flex flex-col transition-transform duration-300 ease-in-out z-50",
-        "lg:translate-x-0",
-        sidebarOpen ? "translate-x-0" : "-translate-x-full",
-        "fixed lg:relative h-full"
-      )}>
+      <aside
+        className={cn(
+          "w-64 bg-upkraft-purple text-white flex flex-col transition-transform duration-300 ease-in-out z-50",
+          "lg:translate-x-0",
+          sidebarOpen ? "translate-x-0" : "-translate-x-full",
+          "fixed lg:relative h-full",
+        )}
+      >
         {/* Logo */}
         <div className="p-6 flex items-center justify-between">
           <h1 className="text-2xl font-bold">UPKRAFT</h1>
@@ -67,7 +69,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             <X className="w-5 h-5" />
           </button>
         </div>
-        
+
         {/* Navigation */}
         <nav className="flex-1 px-3">
           <ul className="space-y-1">
@@ -76,9 +78,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <button
                   className={cn(
                     "w-full flex items-center gap-3 px-3 py-3 text-left rounded-lg transition-colors",
-                    item.active 
-                      ? "bg-white/20 text-white" 
-                      : "text-white/80 hover:bg-white/10 hover:text-white"
+                    item.active
+                      ? "bg-white/20 text-white"
+                      : "text-white/80 hover:bg-white/10 hover:text-white",
                   )}
                 >
                   <item.icon className="w-5 h-5" />
@@ -88,7 +90,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             ))}
           </ul>
         </nav>
-        
+
         {/* Logout */}
         <div className="p-3">
           <button className="w-full flex items-center gap-3 px-3 py-3 text-white/80 hover:bg-white/10 hover:text-white rounded-lg transition-colors">
@@ -97,7 +99,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           </button>
         </div>
       </aside>
-      
+
       {/* Main Content */}
       <main className="flex-1 flex flex-col lg:ml-0">
         {/* Header */}
@@ -121,7 +123,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 />
               </div>
             </div>
-            
+
             {/* Right side icons */}
             <div className="flex items-center gap-2 lg:gap-4">
               <button className="p-2 hover:bg-gray-100 rounded-lg">
@@ -135,16 +137,16 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
                   <User className="w-4 h-4 text-gray-800" />
                 </div>
-                <span className="text-sm font-medium text-gray-700 hidden sm:block">Sherry Wolf</span>
+                <span className="text-sm font-medium text-gray-700 hidden sm:block">
+                  Sherry Wolf
+                </span>
               </div>
             </div>
           </div>
         </header>
-        
+
         {/* Page Content */}
-        <div className="flex-1 p-4 lg:p-6 overflow-auto">
-          {children}
-        </div>
+        <div className="flex-1 p-4 lg:p-6 overflow-auto">{children}</div>
       </main>
     </div>
   );
