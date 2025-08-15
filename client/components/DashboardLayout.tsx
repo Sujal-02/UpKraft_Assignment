@@ -138,19 +138,19 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
 
             {/* Right side icons */}
-            <div className="flex items-center gap-2 lg:gap-4">
-              <button className="p-2 hover:bg-gray-100 rounded-lg">
+            <div className="flex items-center gap-2 lg:gap-3">
+              <button className="p-3 hover:bg-gray-100 rounded-xl transition-colors">
                 <HelpCircle className="w-5 h-5 text-gray-600" />
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded-lg relative">
+              <button className="p-3 hover:bg-gray-100 rounded-xl relative transition-colors">
                 <Bell className="w-5 h-5 text-gray-600" />
-                <span className="absolute -top-1 -right-1 w-3 h-3 bg-upkraft-purple rounded-full"></span>
+                <span className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-r from-red-500 to-purple-600 rounded-full animate-pulse"></span>
               </button>
-              <div className="flex items-center gap-2 ml-2 lg:ml-4">
-                <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
-                  <User className="w-4 h-4 text-gray-800" />
+              <div className="flex items-center gap-3 ml-2 lg:ml-4 p-2 hover:bg-gray-50 rounded-xl transition-colors">
+                <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                  <User className="w-5 h-5 text-white" />
                 </div>
-                <span className="text-sm font-medium text-gray-700 hidden sm:block">
+                <span className="text-sm font-semibold text-gray-800 hidden sm:block">
                   Sherry Wolf
                 </span>
               </div>
