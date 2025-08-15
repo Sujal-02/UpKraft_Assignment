@@ -117,19 +117,19 @@ export default function Index() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Profile Card */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
+            <div className="bg-white rounded-xl p-4 lg:p-6 border border-gray-200">
               <h3 className="text-lg font-semibold mb-4">Profile</h3>
               <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 bg-yellow-400 rounded-full mb-4 flex items-center justify-center">
-                  <img 
-                    src="/api/placeholder/80/80" 
+                <div className="w-16 lg:w-20 h-16 lg:h-20 bg-yellow-400 rounded-full mb-4 flex items-center justify-center">
+                  <img
+                    src="/api/placeholder/80/80"
                     alt="Sherry Wolf"
-                    className="w-16 h-16 rounded-full object-cover"
+                    className="w-12 lg:w-16 h-12 lg:h-16 rounded-full object-cover"
                   />
                 </div>
                 <h4 className="font-semibold text-gray-900">Sherry Wolf</h4>
                 <p className="text-sm text-gray-600 mb-4">Piano Tutor</p>
-                <div className="flex items-center gap-4 text-xs text-gray-500">
+                <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-4 text-xs text-gray-500">
                   <span className="flex items-center gap-1">
                     <Users className="w-3 h-3" />
                     Students 30
