@@ -58,8 +58,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         "fixed lg:relative h-full"
       )}>
         {/* Logo */}
-        <div className="p-6">
+        <div className="p-6 flex items-center justify-between">
           <h1 className="text-2xl font-bold">UPKRAFT</h1>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="lg:hidden p-1 hover:bg-white/10 rounded"
+          >
+            <X className="w-5 h-5" />
+          </button>
         </div>
         
         {/* Navigation */}
