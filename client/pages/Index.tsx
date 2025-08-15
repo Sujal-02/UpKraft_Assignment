@@ -246,15 +246,21 @@ export default function Index() {
 
           {/* Refer and Earn */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="bg-gradient-to-br from-upkraft-purple to-purple-700 rounded-xl p-6 text-white relative overflow-hidden">
-              <h3 className="text-lg font-semibold mb-2">Refer and Earn</h3>
-              <p className="text-sm text-purple-100 mb-4">
-                Get up to 20% commission for every successful referral
-              </p>
-              <button className="bg-yellow-400 text-gray-900 px-4 py-2 rounded-lg text-sm font-medium hover:bg-yellow-300 transition-colors">
-                Refer Now →
-              </button>
-              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-yellow-400 rounded-full opacity-20"></div>
+            <div className="bg-gradient-to-br from-upkraft-purple via-purple-600 to-purple-800 rounded-2xl p-6 text-white relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 group">
+              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="relative z-10">
+                <h3 className="text-xl font-bold mb-3 text-white">Refer and Earn</h3>
+                <p className="text-sm text-purple-100 mb-6 leading-relaxed">
+                  Get up to <span className="font-bold text-yellow-300">20% commission</span> for every successful referral
+                </p>
+                <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-xl text-sm font-bold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                  Refer Now →
+                </button>
+              </div>
+              <div className="absolute -right-6 -bottom-6 w-32 h-32 bg-yellow-400 rounded-full opacity-10"></div>
+              <div className="absolute -right-2 -bottom-2 w-20 h-20 bg-yellow-500 rounded-full opacity-15"></div>
+              <div className="absolute top-4 right-4 w-2 h-2 bg-yellow-300 rounded-full animate-pulse"></div>
+              <div className="absolute top-8 right-8 w-1 h-1 bg-yellow-200 rounded-full animate-pulse delay-300"></div>
             </div>
           </div>
         </div>
