@@ -11,7 +11,8 @@
 ## 🎯 Quick Deploy (2 Steps)
 
 ### Option A: Drag & Drop Deploy (Fastest)
-1. **Zip the build folder**: 
+
+1. **Zip the build folder**:
    - Go to `dist/spa/` folder in your project
    - Select all files inside and create a zip
 2. **Deploy to Netlify**:
@@ -20,9 +21,10 @@
    - Your site will be live in 30 seconds!
 
 ### Option B: Connect GitHub Repository (Recommended)
+
 1. **[Connect to Netlify](#open-mcp-popover)** using the MCP integration
 2. **Or manually**:
-   - Go to [Netlify](https://netlify.com) 
+   - Go to [Netlify](https://netlify.com)
    - Click "Import from Git"
    - Connect your GitHub account
    - Select `UpKraft_Assignment` repository
@@ -47,18 +49,19 @@ Your project is now pre-configured for Netlify with:
 ## 🎉 Expected Result
 
 Once deployed, your UPKRAFT dashboard will be available at:
+
 - `https://random-name-123.netlify.app` (Netlify provides a random URL)
 - You can customize this URL in Netlify settings
 
 ## 🆚 Netlify vs GitHub Pages
 
-| Feature | Netlify | GitHub Pages |
-|---------|---------|--------------|
-| Setup Time | 2 minutes | 10+ minutes |
-| SPA Support | Perfect | Complex setup |
-| Custom Domains | Easy | Manual DNS |
-| Build Speed | Fast | Slow |
-| Debugging | Great logs | Limited info |
+| Feature        | Netlify    | GitHub Pages  |
+| -------------- | ---------- | ------------- |
+| Setup Time     | 2 minutes  | 10+ minutes   |
+| SPA Support    | Perfect    | Complex setup |
+| Custom Domains | Easy       | Manual DNS    |
+| Build Speed    | Fast       | Slow          |
+| Debugging      | Great logs | Limited info  |
 
 ## 🚀 Deploy Now!
 
