@@ -86,15 +86,21 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                       : "text-white/80 hover:bg-white/10 hover:text-white hover:shadow-md",
                   )}
                 >
-                  <div className={cn(
-                    "absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 transition-opacity",
-                    !item.active && "group-hover:opacity-100"
-                  )}></div>
-                  <item.icon className={cn(
-                    "w-5 h-5 relative z-10 transition-transform",
-                    item.active ? "text-white" : "group-hover:scale-110"
-                  )} />
-                  <span className="text-sm font-medium relative z-10">{item.label}</span>
+                  <div
+                    className={cn(
+                      "absolute inset-0 bg-gradient-to-r from-white/5 to-transparent opacity-0 transition-opacity",
+                      !item.active && "group-hover:opacity-100",
+                    )}
+                  ></div>
+                  <item.icon
+                    className={cn(
+                      "w-5 h-5 relative z-10 transition-transform",
+                      item.active ? "text-white" : "group-hover:scale-110",
+                    )}
+                  />
+                  <span className="text-sm font-medium relative z-10">
+                    {item.label}
+                  </span>
                   {item.active && (
                     <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-8 bg-white rounded-l-full"></div>
                   )}

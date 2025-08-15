@@ -91,9 +91,19 @@ const CircularProgress = ({
   return (
     <div className="flex flex-col items-center">
       <div className="relative" style={{ width: size, height: size }}>
-        <svg className="transform -rotate-90 drop-shadow-lg" width={size} height={size}>
+        <svg
+          className="transform -rotate-90 drop-shadow-lg"
+          width={size}
+          height={size}
+        >
           <defs>
-            <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="purpleGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#7B2CBF" />
               <stop offset="50%" stopColor="#9D4EDD" />
               <stop offset="100%" stopColor="#C77DFF" />
@@ -126,7 +136,9 @@ const CircularProgress = ({
           <span className="text-xs text-gray-500 font-medium">/{max}</span>
         </div>
       </div>
-      <span className="text-sm text-gray-600 mt-2 text-center font-medium">{label}</span>
+      <span className="text-sm text-gray-600 mt-2 text-center font-medium">
+        {label}
+      </span>
     </div>
   );
 };
@@ -159,11 +171,23 @@ const ScoreCircle = ({
       <div className="relative w-28 h-28">
         <svg className="transform -rotate-90 w-full h-full drop-shadow-lg">
           <defs>
-            <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="orangeGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#f97316" />
               <stop offset="100%" stopColor="#ea580c" />
             </linearGradient>
-            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <linearGradient
+              id="blueGradient"
+              x1="0%"
+              y1="0%"
+              x2="100%"
+              y2="100%"
+            >
               <stop offset="0%" stopColor="#3b82f6" />
               <stop offset="100%" stopColor="#1d4ed8" />
             </linearGradient>
@@ -195,7 +219,9 @@ const ScoreCircle = ({
           <span className="text-xs text-gray-500 font-medium">/10</span>
         </div>
       </div>
-      <span className="text-xs text-gray-600 mt-2 text-center font-medium">{label}</span>
+      <span className="text-xs text-gray-600 mt-2 text-center font-medium">
+        {label}
+      </span>
     </div>
   );
 };
@@ -212,7 +238,9 @@ export default function Index() {
           {/* Profile Card */}
           <div className="md:col-span-2 lg:col-span-1">
             <div className="bg-white rounded-2xl p-4 lg:p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
-              <h3 className="text-lg font-semibold mb-4 text-gray-800">Profile</h3>
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">
+                Profile
+              </h3>
               <div className="flex flex-col items-center text-center">
                 <div className="relative w-16 lg:w-20 h-16 lg:h-20 mb-4">
                   <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
@@ -227,7 +255,9 @@ export default function Index() {
                   </div>
                 </div>
                 <h4 className="font-bold text-gray-900 text-lg">Sherry Wolf</h4>
-                <p className="text-sm text-gray-600 mb-4 font-medium">Piano Tutor</p>
+                <p className="text-sm text-gray-600 mb-4 font-medium">
+                  Piano Tutor
+                </p>
                 <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-4 text-xs">
                   <span className="flex items-center gap-1 bg-blue-50 px-2 py-1 rounded-full text-blue-700">
                     <Users className="w-3 h-3" />
@@ -274,9 +304,15 @@ export default function Index() {
             <div className="bg-gradient-to-br from-upkraft-purple via-purple-600 to-purple-800 rounded-2xl p-6 text-white relative overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 group">
               <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               <div className="relative z-10">
-                <h3 className="text-xl font-bold mb-3 text-white">Refer and Earn</h3>
+                <h3 className="text-xl font-bold mb-3 text-white">
+                  Refer and Earn
+                </h3>
                 <p className="text-sm text-purple-100 mb-6 leading-relaxed">
-                  Get up to <span className="font-bold text-yellow-300">20% commission</span> for every successful referral
+                  Get up to{" "}
+                  <span className="font-bold text-yellow-300">
+                    20% commission
+                  </span>{" "}
+                  for every successful referral
                 </p>
                 <button className="bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 px-6 py-3 rounded-xl text-sm font-bold hover:from-yellow-300 hover:to-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                   Refer Now →
@@ -297,7 +333,9 @@ export default function Index() {
             <div className="bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white rounded-t-2xl">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-xl font-bold text-gray-800">Upcoming Lessons</h3>
+                  <h3 className="text-xl font-bold text-gray-800">
+                    Upcoming Lessons
+                  </h3>
                   <button className="text-upkraft-purple text-sm font-semibold hover:bg-purple-50 px-3 py-1 rounded-lg transition-colors">
                     View All
                   </button>
@@ -323,7 +361,10 @@ export default function Index() {
                   </thead>
                   <tbody>
                     {upcomingLessons.map((lesson, index) => (
-                      <tr key={index} className="border-t border-gray-50 hover:bg-gradient-to-r hover:from-purple-25 hover:to-blue-25 transition-colors group">
+                      <tr
+                        key={index}
+                        className="border-t border-gray-50 hover:bg-gradient-to-r hover:from-purple-25 hover:to-blue-25 transition-colors group"
+                      >
                         <td className="p-3 lg:p-4 text-xs lg:text-sm font-medium text-gray-900 group-hover:text-purple-900">
                           <span className="inline-flex items-center px-2 py-1 rounded-full bg-purple-100 text-purple-800 font-medium">
                             {lesson.date}
