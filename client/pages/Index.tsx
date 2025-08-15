@@ -329,34 +329,47 @@ export default function Index() {
           {/* Right Side Widgets */}
           <div className="space-y-4 lg:space-y-6">
             {/* Performance Widgets */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg font-bold mb-6 text-center text-gray-800">
                 Overall Course Performance
               </h3>
-              <div className="flex justify-center">
+              <div className="flex justify-center relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-100 to-yellow-100 rounded-full opacity-20"></div>
                 <ScoreCircle score={7.6} label="" color="orange" />
+              </div>
+              <div className="text-center mt-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-orange-100 text-orange-800 text-xs font-medium">
+                  Excellent Performance
+                </span>
               </div>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg font-bold mb-6 text-center text-gray-800">
                 Overall Student Performance
               </h3>
-              <div className="flex justify-center">
+              <div className="flex justify-center relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-cyan-100 rounded-full opacity-20"></div>
                 <ScoreCircle score={6.6} label="" color="blue" />
+              </div>
+              <div className="text-center mt-4">
+                <span className="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-medium">
+                  Good Progress
+                </span>
               </div>
             </div>
 
             {/* Feedback Pending */}
-            <div className="bg-white rounded-xl p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4 text-center">
+            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg font-bold mb-6 text-center text-gray-800">
                 Feedback Pending
               </h3>
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-6 relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full opacity-20"></div>
                 <CircularProgress value={12} max={20} label="" size={80} />
               </div>
               <div className="text-center">
-                <button className="bg-upkraft-purple text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-upkraft-purple-dark transition-colors w-full">
+                <button className="bg-gradient-to-r from-upkraft-purple to-purple-600 text-white px-6 py-3 rounded-xl text-sm font-bold hover:from-purple-600 hover:to-purple-700 transition-all duration-300 w-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
                   Give Feedback →
                 </button>
               </div>
