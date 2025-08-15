@@ -117,7 +117,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
             </div>
             
             {/* Right side icons */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 lg:gap-4">
               <button className="p-2 hover:bg-gray-100 rounded-lg">
                 <HelpCircle className="w-5 h-5 text-gray-600" />
               </button>
@@ -125,11 +125,11 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <Bell className="w-5 h-5 text-gray-600" />
                 <span className="absolute -top-1 -right-1 w-3 h-3 bg-upkraft-purple rounded-full"></span>
               </button>
-              <div className="flex items-center gap-2 ml-4">
+              <div className="flex items-center gap-2 ml-2 lg:ml-4">
                 <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
                   <User className="w-4 h-4 text-gray-800" />
                 </div>
-                <span className="text-sm font-medium text-gray-700">Sherry Wolf</span>
+                <span className="text-sm font-medium text-gray-700 hidden sm:block">Sherry Wolf</span>
               </div>
             </div>
           </div>
