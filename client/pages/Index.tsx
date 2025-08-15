@@ -164,7 +164,7 @@ export default function Index() {
           </div>
 
           {/* Refer and Earn */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="bg-gradient-to-br from-upkraft-purple to-purple-700 rounded-xl p-6 text-white relative overflow-hidden">
               <h3 className="text-lg font-semibold mb-2">Refer and Earn</h3>
               <p className="text-sm text-purple-100 mb-4">
