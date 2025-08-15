@@ -56,12 +56,21 @@ Your UPKRAFT Dashboard is configured for automatic deployment to GitHub Pages.
    base: mode === "production" ? "/NEW_REPO_NAME/" : "/",
    ```
 
+## 🔧 Recent Fixes Applied
+
+✅ **Fixed PNPM Version Mismatch**: Updated from version 9 to 10.14.0 to match package.json
+✅ **Simplified Caching**: Used Node.js built-in pnpm cache instead of manual cache setup
+✅ **Added Production Environment**: Set NODE_ENV=production for optimized builds
+✅ **Removed Duplicate Workflow**: Cleaned up duplicate jekyll-gh-pages.yml file
+
 ### 🐛 Troubleshooting
 
 - **404 Errors**: Make sure GitHub Pages source is set to "GitHub Actions"
 - **Blank Page**: Check browser console for path errors
 - **Build Fails**: Check Actions tab for detailed error logs
 - **Wrong Base Path**: Ensure `vite.config.ts` base path matches your repo name
+- **PNPM Issues**: Workflow now uses exact version 10.14.0 from package.json
+- **Cache Issues**: Using Node.js native pnpm caching for reliability
 
 ### 📁 Key Files
 
