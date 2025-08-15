@@ -269,47 +269,54 @@ export default function Index() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
           {/* Upcoming Lessons Table */}
           <div className="lg:col-span-2">
-            <div className="bg-white rounded-xl border border-gray-200">
-              <div className="p-6 border-b border-gray-200">
+            <div className="bg-white rounded-2xl border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="p-6 border-b border-gray-100 bg-gradient-to-r from-gray-50 to-white rounded-t-2xl">
                 <div className="flex justify-between items-center">
-                  <h3 className="text-lg font-semibold">Upcoming Lessons</h3>
-                  <button className="text-upkraft-purple text-sm font-medium hover:underline">
+                  <h3 className="text-xl font-bold text-gray-800">Upcoming Lessons</h3>
+                  <button className="text-upkraft-purple text-sm font-semibold hover:bg-purple-50 px-3 py-1 rounded-lg transition-colors">
                     View All
                   </button>
                 </div>
               </div>
               <div className="overflow-x-auto">
                 <table className="w-full">
-                  <thead className="bg-gray-50">
+                  <thead className="bg-gradient-to-r from-gray-50 to-gray-100">
                     <tr>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                      <th className="text-left p-3 lg:p-4 text-xs lg:text-sm font-bold text-gray-700 uppercase tracking-wide">
                         Date
                       </th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                      <th className="text-left p-3 lg:p-4 text-xs lg:text-sm font-bold text-gray-700 uppercase tracking-wide">
                         Time
                       </th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600 hidden sm:table-cell">
+                      <th className="text-left p-3 lg:p-4 text-xs lg:text-sm font-bold text-gray-700 uppercase tracking-wide hidden sm:table-cell">
                         Course
                       </th>
-                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">
+                      <th className="text-left p-3 lg:p-4 text-xs lg:text-sm font-bold text-gray-700 uppercase tracking-wide">
                         Student
                       </th>
                     </tr>
                   </thead>
                   <tbody>
                     {upcomingLessons.map((lesson, index) => (
-                      <tr key={index} className="border-t border-gray-100">
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
-                          {lesson.date}
+                      <tr key={index} className="border-t border-gray-50 hover:bg-gradient-to-r hover:from-purple-25 hover:to-blue-25 transition-colors group">
+                        <td className="p-3 lg:p-4 text-xs lg:text-sm font-medium text-gray-900 group-hover:text-purple-900">
+                          <span className="inline-flex items-center px-2 py-1 rounded-full bg-purple-100 text-purple-800 font-medium">
+                            {lesson.date}
+                          </span>
                         </td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
+                        <td className="p-3 lg:p-4 text-xs lg:text-sm text-gray-700 font-medium group-hover:text-gray-900">
                           {lesson.time}
                         </td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900 hidden sm:table-cell">
+                        <td className="p-3 lg:p-4 text-xs lg:text-sm text-gray-700 font-medium hidden sm:table-cell group-hover:text-gray-900">
                           {lesson.course}
                         </td>
-                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">
-                          {lesson.student.split(" &")[0]}
+                        <td className="p-3 lg:p-4 text-xs lg:text-sm text-gray-900 font-medium">
+                          <span className="inline-flex items-center">
+                            <div className="w-6 h-6 bg-gradient-to-br from-blue-400 to-purple-500 rounded-full mr-2 flex items-center justify-center text-white text-xs font-bold">
+                              {lesson.student.split(" ")[0][0]}
+                            </div>
+                            {lesson.student.split(" &")[0]}
+                          </span>
                         </td>
                       </tr>
                     ))}
