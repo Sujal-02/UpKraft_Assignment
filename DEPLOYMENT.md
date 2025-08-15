@@ -4,12 +4,14 @@
 
 Your UPKRAFT Dashboard is configured for automatic deployment to GitHub Pages.
 
-### ✅ Current Configuration
+### ✅ Current Configuration (FIXED)
 
 - **Repository**: `Sujal-02/UpKraft_Assignment`
 - **Base Path**: `/UpKraft_Assignment/`
-- **Workflow**: `.github/workflows/deploy.yml`
+- **Workflow**: `.github/workflows/deploy.yml` (Updated with fixes)
 - **Build Output**: `dist/spa/`
+- **PNPM Version**: `10.14.0` (Fixed version mismatch)
+- **Node.js**: `18.x` with pnpm cache enabled
 
 ### 📋 Steps to Deploy
 
