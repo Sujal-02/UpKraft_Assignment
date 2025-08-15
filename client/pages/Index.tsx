@@ -138,42 +138,57 @@ const ScoreCircle = ({
   const strokeDashoffset = circumference - (percentage / 100) * circumference;
 
   const colorClasses = {
-    orange: "text-orange-500",
-    blue: "text-blue-500",
+    orange: "stroke-orange-500",
+    blue: "stroke-blue-500",
+  };
+
+  const gradientIds = {
+    orange: "orangeGradient",
+    blue: "blueGradient",
   };
 
   return (
     <div className="flex flex-col items-center">
-      <div className="relative w-24 h-24">
-        <svg className="transform -rotate-90 w-full h-full">
+      <div className="relative w-28 h-28">
+        <svg className="transform -rotate-90 w-full h-full drop-shadow-lg">
+          <defs>
+            <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#f97316" />
+              <stop offset="100%" stopColor="#ea580c" />
+            </linearGradient>
+            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#3b82f6" />
+              <stop offset="100%" stopColor="#1d4ed8" />
+            </linearGradient>
+          </defs>
           <circle
-            cx="48"
-            cy="48"
+            cx="56"
+            cy="56"
             r="35"
             stroke="currentColor"
-            strokeWidth="6"
+            strokeWidth="8"
             fill="transparent"
             className="text-gray-200"
           />
           <circle
-            cx="48"
-            cy="48"
+            cx="56"
+            cy="56"
             r="35"
-            stroke="currentColor"
-            strokeWidth="6"
+            stroke={`url(#${gradientIds[color]})`}
+            strokeWidth="8"
             fill="transparent"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
-            className={colorClasses[color]}
             strokeLinecap="round"
+            className="drop-shadow-sm"
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-          <span className="text-xl font-bold text-gray-900">{score}</span>
-          <span className="text-xs text-gray-500">/10</span>
+          <span className="text-2xl font-bold text-gray-900">{score}</span>
+          <span className="text-xs text-gray-500 font-medium">/10</span>
         </div>
       </div>
-      <span className="text-xs text-gray-600 mt-2 text-center">{label}</span>
+      <span className="text-xs text-gray-600 mt-2 text-center font-medium">{label}</span>
     </div>
   );
 };
