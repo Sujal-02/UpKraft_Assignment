@@ -151,11 +151,11 @@ export default function Index() {
           <div className="md:col-span-2 lg:col-span-2">
             <div className="grid grid-cols-2 gap-2 lg:gap-4 h-full">
               {statsData.map((stat, index) => (
-                <div key={index} className="bg-white rounded-xl p-4 border border-gray-200 flex flex-col justify-center">
-                  <div className={`text-2xl font-bold ${stat.color} mb-1`}>
+                <div key={index} className="bg-white rounded-xl p-3 lg:p-4 border border-gray-200 flex flex-col justify-center">
+                  <div className={`text-xl lg:text-2xl font-bold ${stat.color} mb-1`}>
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-600">
+                  <div className="text-xs lg:text-sm text-gray-600 leading-tight">
                     {stat.label}
                   </div>
                 </div>
