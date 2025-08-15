@@ -217,7 +217,7 @@ export default function Index() {
           </div>
 
           {/* Right Side Widgets */}
-          <div className="space-y-6">
+          <div className="space-y-4 lg:space-y-6">
             {/* Performance Widgets */}
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <h3 className="text-lg font-semibold mb-4 text-center">Overall Course Performance</h3>
