@@ -1,20 +1,22 @@
-import { ReactNode } from "react";
-import { 
-  Home, 
-  Users, 
-  BarChart3, 
-  Calendar, 
-  ClipboardList, 
-  Music, 
-  Play, 
-  CreditCard, 
-  UserPlus, 
-  Settings, 
+import { ReactNode, useState } from "react";
+import {
+  Home,
+  Users,
+  BarChart3,
+  Calendar,
+  ClipboardList,
+  Music,
+  Play,
+  CreditCard,
+  UserPlus,
+  Settings,
   LogOut,
   Search,
   Bell,
   HelpCircle,
-  User
+  User,
+  Menu,
+  X
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
