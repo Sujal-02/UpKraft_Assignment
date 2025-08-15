@@ -186,29 +186,34 @@ export default function Index() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Profile Card */}
           <div className="md:col-span-2 lg:col-span-1">
-            <div className="bg-white rounded-xl p-4 lg:p-6 border border-gray-200">
-              <h3 className="text-lg font-semibold mb-4">Profile</h3>
+            <div className="bg-white rounded-2xl p-4 lg:p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300">
+              <h3 className="text-lg font-semibold mb-4 text-gray-800">Profile</h3>
               <div className="flex flex-col items-center text-center">
-                <div className="w-16 lg:w-20 h-16 lg:h-20 bg-yellow-400 rounded-full mb-4 flex items-center justify-center">
-                  <img
-                    src="/api/placeholder/80/80"
-                    alt="Sherry Wolf"
-                    className="w-12 lg:w-16 h-12 lg:h-16 rounded-full object-cover"
-                  />
+                <div className="relative w-16 lg:w-20 h-16 lg:h-20 mb-4">
+                  <div className="w-full h-full bg-gradient-to-br from-yellow-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg">
+                    <img
+                      src="/api/placeholder/80/80"
+                      alt="Sherry Wolf"
+                      className="w-12 lg:w-16 h-12 lg:h-16 rounded-full object-cover border-2 border-white"
+                    />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-green-500 rounded-full border-2 border-white flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full"></div>
+                  </div>
                 </div>
-                <h4 className="font-semibold text-gray-900">Sherry Wolf</h4>
-                <p className="text-sm text-gray-600 mb-4">Piano Tutor</p>
-                <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-4 text-xs text-gray-500">
-                  <span className="flex items-center gap-1">
+                <h4 className="font-bold text-gray-900 text-lg">Sherry Wolf</h4>
+                <p className="text-sm text-gray-600 mb-4 font-medium">Piano Tutor</p>
+                <div className="flex flex-col sm:flex-row items-center gap-2 lg:gap-4 text-xs">
+                  <span className="flex items-center gap-1 bg-blue-50 px-2 py-1 rounded-full text-blue-700">
                     <Users className="w-3 h-3" />
                     Students 30
                   </span>
-                  <span className="flex items-center gap-1">
+                  <span className="flex items-center gap-1 bg-purple-50 px-2 py-1 rounded-full text-purple-700">
                     <Calendar className="w-3 h-3" />
                     Course 6
                   </span>
-                  <span className="flex items-center gap-1">
-                    <Star className="w-3 h-3" />
+                  <span className="flex items-center gap-1 bg-yellow-50 px-2 py-1 rounded-full text-yellow-700">
+                    <Star className="w-3 h-3 fill-current" />
                     Rating 5
                   </span>
                 </div>
