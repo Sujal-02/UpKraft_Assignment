@@ -45,6 +45,8 @@ jobs:
 
       - name: Build client application
         run: pnpm build:client
+        env:
+          NODE_ENV: production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
