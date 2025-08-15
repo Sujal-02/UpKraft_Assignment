@@ -223,20 +223,22 @@ export default function Index() {
 
           {/* Stats Grid */}
           <div className="md:col-span-2 lg:col-span-2">
-            <div className="grid grid-cols-2 gap-2 lg:gap-4 h-full">
+            <div className="grid grid-cols-2 gap-3 lg:gap-4 h-full">
               {statsData.map((stat, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl p-3 lg:p-4 border border-gray-200 flex flex-col justify-center"
+                  className="bg-white rounded-2xl p-4 lg:p-6 border border-gray-100 shadow-lg hover:shadow-xl transition-all duration-300 flex flex-col justify-center relative overflow-hidden group"
                 >
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-100 to-blue-100 rounded-full -mr-10 -mt-10 opacity-50 group-hover:opacity-70 transition-opacity"></div>
                   <div
-                    className={`text-xl lg:text-2xl font-bold ${stat.color} mb-1`}
+                    className={`text-2xl lg:text-3xl font-bold ${stat.color} mb-2 relative z-10`}
                   >
                     {stat.value}
                   </div>
-                  <div className="text-xs lg:text-sm text-gray-600 leading-tight">
+                  <div className="text-xs lg:text-sm text-gray-600 leading-tight font-medium relative z-10">
                     {stat.label}
                   </div>
+                  <div className="absolute bottom-2 right-2 w-8 h-8 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 opacity-20"></div>
                 </div>
               ))}
             </div>
