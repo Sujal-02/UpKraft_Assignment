@@ -181,7 +181,10 @@ const ScoreCircle = ({
 export default function Index() {
   return (
     <DashboardLayout>
-      <div className="space-y-6">
+      <div className="space-y-8 relative">
+        {/* Subtle background decoration */}
+        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-purple-100/30 to-transparent rounded-full -mr-32 -mt-32 pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-blue-100/20 to-transparent rounded-full -ml-24 -mb-24 pointer-events-none"></div>
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Profile Card */}
