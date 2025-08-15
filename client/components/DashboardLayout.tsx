@@ -60,11 +60,14 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
         )}
       >
         {/* Logo */}
-        <div className="p-6 flex items-center justify-between">
-          <h1 className="text-2xl font-bold">UPKRAFT</h1>
+        <div className="p-6 flex items-center justify-between relative">
+          <div className="absolute inset-0 bg-gradient-to-r from-white/5 to-transparent rounded-lg"></div>
+          <h1 className="text-2xl font-bold tracking-wide bg-gradient-to-r from-white to-purple-100 bg-clip-text text-transparent relative z-10">
+            UPKRAFT
+          </h1>
           <button
             onClick={() => setSidebarOpen(false)}
-            className="lg:hidden p-1 hover:bg-white/10 rounded"
+            className="lg:hidden p-2 hover:bg-white/10 rounded-lg transition-colors relative z-10"
           >
             <X className="w-5 h-5" />
           </button>
