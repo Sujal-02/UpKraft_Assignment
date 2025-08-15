@@ -116,23 +116,23 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Main Content */}
       <main className="flex-1 flex flex-col lg:ml-0">
         {/* Header */}
-        <header className="bg-white border-b border-gray-200 px-4 lg:px-6 py-4">
+        <header className="bg-white border-b border-gray-100 px-4 lg:px-6 py-4 shadow-sm">
           <div className="flex items-center justify-between">
             {/* Mobile menu button and Search */}
             <div className="flex items-center gap-4">
               <button
                 onClick={() => setSidebarOpen(!sidebarOpen)}
-                className="lg:hidden p-2 hover:bg-gray-100 rounded-lg"
+                className="lg:hidden p-2 hover:bg-gray-100 rounded-xl transition-colors"
               >
                 <Menu className="w-5 h-5 text-gray-600" />
               </button>
 
               <div className="relative hidden sm:block">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                 <input
                   type="text"
                   placeholder="Search here"
-                  className="pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-upkraft-purple focus:border-transparent w-64 lg:w-80"
+                  className="pl-12 pr-4 py-3 border border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-upkraft-purple/20 focus:border-upkraft-purple transition-all w-64 lg:w-80 bg-gray-50 hover:bg-white"
                 />
               </div>
             </div>
