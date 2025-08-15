@@ -148,8 +148,8 @@ export default function Index() {
           </div>
 
           {/* Stats Grid */}
-          <div className="lg:col-span-2">
-            <div className="grid grid-cols-2 gap-4 h-full">
+          <div className="md:col-span-2 lg:col-span-2">
+            <div className="grid grid-cols-2 gap-2 lg:gap-4 h-full">
               {statsData.map((stat, index) => (
                 <div key={index} className="bg-white rounded-xl p-4 border border-gray-200 flex flex-col justify-center">
                   <div className={`text-2xl font-bold ${stat.color} mb-1`}>
