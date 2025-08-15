@@ -204,10 +204,10 @@ export default function Index() {
                   <tbody>
                     {upcomingLessons.map((lesson, index) => (
                       <tr key={index} className="border-t border-gray-100">
-                        <td className="p-4 text-sm text-gray-900">{lesson.date}</td>
-                        <td className="p-4 text-sm text-gray-900">{lesson.time}</td>
-                        <td className="p-4 text-sm text-gray-900">{lesson.course}</td>
-                        <td className="p-4 text-sm text-gray-900">{lesson.student}</td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.date}</td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.time}</td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900 hidden sm:table-cell">{lesson.course}</td>
+                        <td className="p-2 lg:p-4 text-xs lg:text-sm text-gray-900">{lesson.student.split(' &')[0]}</td>
                       </tr>
                     ))}
                   </tbody>
