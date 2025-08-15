@@ -38,10 +38,25 @@ const sidebarItems = [
 ];
 
 export default function DashboardLayout({ children }: DashboardLayoutProps) {
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <div className="flex h-screen bg-gray-50">
+      {/* Mobile sidebar overlay */}
+      {sidebarOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
+
       {/* Sidebar */}
-      <aside className="w-64 bg-upkraft-purple text-white flex flex-col">
+      <aside className={cn(
+        "w-64 bg-upkraft-purple text-white flex flex-col transition-transform duration-300 ease-in-out z-50",
+        "lg:translate-x-0",
+        sidebarOpen ? "translate-x-0" : "-translate-x-full",
+        "fixed lg:relative h-full"
+      )}>
         {/* Logo */}
         <div className="p-6">
           <h1 className="text-2xl font-bold">UPKRAFT</h1>
