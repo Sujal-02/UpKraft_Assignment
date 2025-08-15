@@ -53,7 +53,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       {/* Sidebar */}
       <aside
         className={cn(
-          "w-64 bg-upkraft-purple text-white flex flex-col transition-transform duration-300 ease-in-out z-50",
+          "w-64 bg-gradient-to-b from-upkraft-purple via-purple-700 to-purple-800 text-white flex flex-col transition-all duration-300 ease-in-out z-50 shadow-2xl",
           "lg:translate-x-0",
           sidebarOpen ? "translate-x-0" : "-translate-x-full",
           "fixed lg:relative h-full",
