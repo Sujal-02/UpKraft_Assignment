@@ -69,7 +69,7 @@ Your UPKRAFT Dashboard is configured for automatic deployment to GitHub Pages.
 - **Blank Page**: Check browser console for path errors
 - **Build Fails**: Check Actions tab for detailed error logs
 - **Wrong Base Path**: Ensure `vite.config.ts` base path matches your repo name
-- **PNPM Issues**: Workflow now uses exact version 10.14.0 from package.json
+- **PNPM Version Conflicts**: Workflow now auto-detects version from packageManager field in package.json
 - **Cache Issues**: Using Node.js native pnpm caching for reliability
 
 ### 📁 Key Files
