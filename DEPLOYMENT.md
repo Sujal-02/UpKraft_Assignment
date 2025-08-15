@@ -58,7 +58,7 @@ Your UPKRAFT Dashboard is configured for automatic deployment to GitHub Pages.
 
 ## 🔧 Recent Fixes Applied
 
-✅ **Fixed PNPM Version Mismatch**: Updated from version 9 to 10.14.0 to match package.json
+✅ **Fixed PNPM Version Conflict**: Removed version from GitHub Actions, now uses packageManager from package.json
 ✅ **Simplified Caching**: Used Node.js built-in pnpm cache instead of manual cache setup
 ✅ **Added Production Environment**: Set NODE_ENV=production for optimized builds
 ✅ **Removed Duplicate Workflow**: Cleaned up duplicate jekyll-gh-pages.yml file
