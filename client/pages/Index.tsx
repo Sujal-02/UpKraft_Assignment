@@ -91,7 +91,14 @@ const CircularProgress = ({
   return (
     <div className="flex flex-col items-center">
       <div className="relative" style={{ width: size, height: size }}>
-        <svg className="transform -rotate-90" width={size} height={size}>
+        <svg className="transform -rotate-90 drop-shadow-lg" width={size} height={size}>
+          <defs>
+            <linearGradient id="purpleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stopColor="#7B2CBF" />
+              <stop offset="50%" stopColor="#9D4EDD" />
+              <stop offset="100%" stopColor="#C77DFF" />
+            </linearGradient>
+          </defs>
           <circle
             cx={size / 2}
             cy={size / 2}
@@ -105,21 +112,21 @@ const CircularProgress = ({
             cx={size / 2}
             cy={size / 2}
             r={size / 3}
-            stroke="currentColor"
+            stroke="url(#purpleGradient)"
             strokeWidth="8"
             fill="transparent"
             strokeDasharray={circumference}
             strokeDashoffset={strokeDashoffset}
-            className="text-upkraft-purple transition-all duration-300"
             strokeLinecap="round"
+            className="transition-all duration-500 drop-shadow-sm"
           />
         </svg>
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <span className="text-2xl font-bold text-gray-900">{value}</span>
-          <span className="text-xs text-gray-500">/{max}</span>
+          <span className="text-xs text-gray-500 font-medium">/{max}</span>
         </div>
       </div>
-      <span className="text-sm text-gray-600 mt-2 text-center">{label}</span>
+      <span className="text-sm text-gray-600 mt-2 text-center font-medium">{label}</span>
     </div>
   );
 };
