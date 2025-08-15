@@ -114,9 +114,9 @@ export default function Index() {
     <DashboardLayout>
       <div className="space-y-6">
         {/* Top Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
           {/* Profile Card */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1">
             <div className="bg-white rounded-xl p-6 border border-gray-200">
               <h3 className="text-lg font-semibold mb-4">Profile</h3>
               <div className="flex flex-col items-center text-center">
