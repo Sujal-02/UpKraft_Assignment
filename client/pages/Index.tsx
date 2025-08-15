@@ -195,10 +195,10 @@ export default function Index() {
                 <table className="w-full">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="text-left p-4 text-sm font-medium text-gray-600">Date</th>
-                      <th className="text-left p-4 text-sm font-medium text-gray-600">Time</th>
-                      <th className="text-left p-4 text-sm font-medium text-gray-600">Course</th>
-                      <th className="text-left p-4 text-sm font-medium text-gray-600">Student Name</th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Date</th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Time</th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600 hidden sm:table-cell">Course</th>
+                      <th className="text-left p-2 lg:p-4 text-xs lg:text-sm font-medium text-gray-600">Student</th>
                     </tr>
                   </thead>
                   <tbody>
