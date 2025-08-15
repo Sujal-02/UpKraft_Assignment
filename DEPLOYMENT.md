@@ -19,6 +19,7 @@ Your UPKRAFT Dashboard is configured for automatic deployment to GitHub Pages.
    - Under "Source", select **GitHub Actions**
 
 2. **Push to Main Branch**:
+
    ```bash
    git add .
    git commit -m "Deploy UPKRAFT Dashboard"
