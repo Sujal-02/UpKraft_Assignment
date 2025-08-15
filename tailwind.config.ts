@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        upkraft: {
+          purple: "#7B2CBF",
+          "purple-dark": "#5A1E7A",
+          "purple-light": "#9D4EDD",
+          "purple-bg": "#F3E8FF",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
